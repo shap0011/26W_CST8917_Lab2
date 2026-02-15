@@ -1,0 +1,11 @@
+# Azure Functions / Python
+src/.venv/
+**/.venv/
+__pycache__/
+*.pyc
+
+# Local settings (never commit)
+**/local.settings.json
+
+# Azurite (if local files created)
+.azurite/
