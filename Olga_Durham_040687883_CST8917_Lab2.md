@@ -9,12 +9,13 @@
 
 ## Overview
 
-<details>
-<summary>Read more</summary>
-<dev>
 In Week 4, you built your first Durable Function using the <strong>Function Chaining</strong> pattern - calling activities one after another in sequence. In this lab, you'll build a <strong>Smart Image Analyzer</strong> that uses the <strong>Fan-Out/Fan-In</strong> pattern to run multiple analyses on an image <strong>in parallel</strong>.
 
 When an image is uploaded to Azure Blob Storage, your Durable Function will automatically trigger and run four different analyses simultaneously - then combine them into a single report stored in Azure Table Storage.
+
+<details>
+<summary>Read more</summary>
+<dev>
 
 <strong>What You'll Learn:</strong>
 - Implement the Fan-Out/Fan-In pattern with Durable Functions
@@ -37,10 +38,6 @@ When an image is uploaded to Azure Blob Storage, your Durable Function will auto
 ---
 
 ## Architecture
-
-<details>
-<summary>Read more</summary>
-<dev>
 
 ```mermaid
 flowchart TD
@@ -81,6 +78,10 @@ flowchart TD
     style HTTP fill:#3498db,stroke:#2980b9,color:#fff
 ```
 
+<details>
+<summary>Read more</summary>
+<dev>
+
 ### Pattern Comparison: Week 4 vs. Lab 2
 
 | Aspect         | Week 4 (City Info)                    | Lab 2 (Image Analyzer)               |
@@ -108,15 +109,15 @@ Fan-Out/Fan-In is the right pattern when you have **multiple independent tasks**
 
 ## Part 1: Create the Project
 
-<details>
-<summary>Read more</summary>
-<dev>
-
 ### Step 1.1: Create a New Functions Project
 
 1. Press `F1` to open the Command Palette
 2. Select **Azure Functions: Create New Project...**
 3. Choose a new empty folder (e.g., `ImageAnalyzerLab`)
+
+<details>
+<summary>Read more</summary>
+<dev>
 
 | Prompt                          | Your Selection             |
 | ------------------------------- | -------------------------- |
@@ -187,10 +188,6 @@ Open `local.settings.json` and replace its contents with:
 
 ## Part 2: Understand the Code Architecture
 
-<details>
-<summary>Read more</summary>
-<dev>
-
 Before writing code, let's understand how the pieces fit together. You will write **8 functions** in a single file:
 
 | #   | Function                      | Type         | Role                                                    |
@@ -203,6 +200,10 @@ Before writing code, let's understand how the pieces fit together. You will writ
 | 6   | `analyze_metadata`            | Activity     | Extracts real image metadata (dimensions, format, size) |
 | 7   | `generate_report`             | Activity     | Combines all four analyses into a unified report        |
 | 8   | `store_results`               | Activity     | Saves the report to Azure Table Storage                 |
+
+<details>
+<summary>Read more</summary>
+<dev>
 
 Plus one additional HTTP function:
 
@@ -243,11 +244,11 @@ Notice: **no `yield` on each `call_activity`**. Instead, you collect all the tas
 
 ## Part 3: Write the Code
 
+Open `function_app.py` and replace its entire contents with the code below. Read the comments carefully - they explain each section.
+
 <details>
 <summary>Read more</summary>
 <dev>
-
-Open `function_app.py` and replace its entire contents with the code below. Read the comments carefully - they explain each section.
 
 ```python
 # =============================================================================
@@ -788,11 +789,11 @@ def get_results(req: func.HttpRequest) -> func.HttpResponse:
 
 ## Part 4: Understanding the Code
 
+Take a moment to understand how this code differs from Week 4.
+
 <details>
 <summary>Read more</summary>
 <dev>
-
-Take a moment to understand how this code differs from Week 4.
 
 ### 4.1 Blob Trigger vs. HTTP Trigger
 
@@ -856,10 +857,6 @@ results = yield context.task_all(tasks)  # wait for ALL
 
 ## Part 5: Run and Test Locally
 
-<details>
-<summary>Read more</summary>
-<dev>
-
 ### Step 5.1: Start Azurite
 
 Durable Functions and Table Storage both require Azurite locally.
@@ -869,6 +866,10 @@ Durable Functions and Table Storage both require Azurite locally.
 3. Verify the status bar shows Azurite is running
 
 > **CLI alternative:** `azurite --silent --location .azurite --debug .azurite/debug.log`
+
+<details>
+<summary>Read more</summary>
+<dev>
 
 ### Step 5.2: Create the Images Container
 
@@ -1021,24 +1022,13 @@ Try different image types:
 
 ## Part 6: Test with the .http File
 
-<details>
-<summary>Read more</summary>
-<dev>
-
 Open the `test-function.http` file included with this lab in VS Code. Use **Send Request** to query the results endpoint.
 
 > **Note:** You cannot trigger a blob upload via the REST Client - that requires uploading a file to Blob Storage. The `.http` file is for testing the `get_results` HTTP endpoint.
 
-</dev>
-</details>
-
 ---
 
 ## Part 7: Deploy to Azure
-
-<details>
-<summary>Read more</summary>
-<dev>
 
 ### Step 7.1: Create Azure Resources
 
@@ -1057,6 +1047,10 @@ You need a Storage Account (for Blob Storage and Table Storage) and a Function A
 | **Select a hosting plan**                   | `Consumption`                                         |
 | **Select a storage account**                | Create new (e.g., `stimageanalyzer`)                  |
 | **Select an Application Insights resource** | `Skip for now`                                        |
+
+<details>
+<summary>Read more</summary>
+<dev>
 
 ### Step 7.2: Configure Application Settings
 
@@ -1095,13 +1089,13 @@ After the Function App is created, add the `ImageStorageConnection` setting:
 
 ## Part 8: Submission
 
-<details>
-<summary>Read more</summary>
-<dev>
-
 ### Deliverables
 
 Submit your completed lab by providing a **GitHub repository URL** containing:
+
+<details>
+<summary>Read more</summary>
+<dev>
 
 | Item                        | Description                                                     |
 | --------------------------- | --------------------------------------------------------------- |
@@ -1135,13 +1129,13 @@ Submit only your **GitHub repository URL** to Brightspace.
 
 ## Stretch Goal: Azure Computer Vision Integration
 
-<details>
-<summary>Read more</summary>
-<dev>
-
 > **Optional:** This section is not required for submission but demonstrates how to swap mock activities for real AI analysis.
 
 If you want to use Azure's Computer Vision API for real object detection and OCR:
+
+<details>
+<summary>Read more</summary>
+<dev>
 
 1. Create a **Computer Vision** resource in Azure Portal
 2. Add your API key and endpoint to `local.settings.json`:
@@ -1163,10 +1157,6 @@ If you want to use Azure's Computer Vision API for real object detection and OCR
 
 ## Summary
 
-<details>
-<summary>Read more</summary>
-<dev>
-
 You have completed the following:
 - Implemented the **Fan-Out/Fan-In** pattern with Azure Durable Functions
 - Used a **Blob Storage trigger** to start orchestrations automatically
@@ -1174,6 +1164,10 @@ You have completed the following:
 - Stored analysis results in **Azure Table Storage**
 - Retrieved results via an **HTTP endpoint**
 - Deployed to Azure and tested in the cloud
+
+<details>
+<summary>Read more</summary>
+<dev>
 
 **Key Concepts:**
 
@@ -1225,14 +1219,8 @@ flowchart LR
 
 ## Resources
 
-<details>
-<summary>Read more</summary>
-<dev>
-
 - [Durable Functions Fan-Out/Fan-In Pattern](https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-cloud-backup?tabs=python)
 - [Azure Blob Storage Trigger](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-blob-trigger?tabs=python-v2)
 - [Pillow (PIL) Documentation](https://pillow.readthedocs.io/)
 - [Azure Computer Vision API](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview)
 
-</dev>
-</details>
