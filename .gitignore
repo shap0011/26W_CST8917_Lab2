@@ -9,3 +9,7 @@ __pycache__/
 
 # Azurite (if local files created)
 .azurite/
+
+# Lab artifacts (not needed in repo)
+*.pdf
+footage/
