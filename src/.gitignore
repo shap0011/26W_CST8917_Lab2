@@ -133,3 +133,8 @@ __blobstorage__
 __queuestorage__
 __azurite_db*__.json
 .python_packages
+
+# Ensure virtual environments are ignored everywhere
+.venv/
+src/.venv/
+**/.venv/
