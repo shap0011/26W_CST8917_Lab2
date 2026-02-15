@@ -14,8 +14,10 @@ In Week 4, you built your first Durable Function using the <strong>Function Chai
 When an image is uploaded to Azure Blob Storage, your Durable Function will automatically trigger and run four different analyses simultaneously - then combine them into a single report stored in Azure Table Storage.
 
 <details>
-<summary><strong>What You'll Learn:</strong></summary>
+<summary>Read More</summary>
 <dev>
+
+<strong>What You'll Learn:</strong>
 
 - Implement the Fan-Out/Fan-In pattern with Durable Functions
 - Use a Blob Storage trigger to start orchestrations automatically
@@ -23,12 +25,7 @@ When an image is uploaded to Azure Blob Storage, your Durable Function will auto
 - Store structured results in Azure Table Storage
 - Retrieve results via an HTTP endpoint
 
-</dev>
-</details>
-
-<details>
-<summary><strong>Prerequisites:</strong></summary>
-<dev>
+<strong>Prerequisites:</strong>
 
 - Completed Week 4 Durable Functions Exercise
 - VS Code with Azure Functions Extension installed
@@ -45,7 +42,7 @@ When an image is uploaded to Azure Blob Storage, your Durable Function will auto
 ## Architecture
 
 <details>
-<summary><strong>Open flowchart diagram</strong></summary>
+<summary>Read More</summary>
 <dev>
 
 ```mermaid
@@ -86,12 +83,7 @@ flowchart TD
     style Done fill:#27ae60,stroke:#1e8449,color:#fff
     style HTTP fill:#3498db,stroke:#2980b9,color:#fff
 ```
-</dev>
-</details>
-
-<details>
-<summary><strong>Pattern Comparison: Week 4 vs. Lab 2</strong></summary>
-<dev>
+<strong>Pattern Comparison: Week 4 vs. Lab 2</strong>
 
 | Aspect         | Week 4 (City Info)                    | Lab 2 (Image Analyzer)               |
 | -------------- | ------------------------------------- | ------------------------------------ |
@@ -102,12 +94,7 @@ flowchart TD
 | **Output**     | Return directly                       | Store in Table Storage               |
 | **Execution**  | One at a time: F1 &rarr; F2 &rarr; F3 | Parallel: F1, F2, F3, F4 all at once |
 
-</dev>
-</details>
-
-<details>
-<summary><strong>Why Fan-Out/Fan-In?</strong></summary>
-<dev>
+<strong>Why Fan-Out/Fan-In?</strong>
 
 In Week 4, you called `get_city_info` three times **in sequence** - each call waited for the previous one to finish. That was fine for three quick operations, but what if each analysis takes 5 seconds?
 
