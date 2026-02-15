@@ -13,3 +13,7 @@ __pycache__/
 # Lab artifacts (not needed in repo)
 *.pdf
 footage/
+
+*.mp4
+*.mov
+*.avi
