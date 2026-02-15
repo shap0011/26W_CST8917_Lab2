@@ -44,6 +44,10 @@ When an image is uploaded to Azure Blob Storage, your Durable Function will auto
 
 ## Architecture
 
+<details>
+<summary><strong>Open flowchart diagram</strong></summary>
+<dev>
+
 ```mermaid
 flowchart TD
     Upload(["Image uploaded to Blob Storage<br/>(images container)"])
@@ -82,12 +86,12 @@ flowchart TD
     style Done fill:#27ae60,stroke:#1e8449,color:#fff
     style HTTP fill:#3498db,stroke:#2980b9,color:#fff
 ```
+</dev>
+</details>
 
 <details>
-<summary>Read more</summary>
+<summary><strong>Pattern Comparison: Week 4 vs. Lab 2</strong></summary>
 <dev>
-
-### Pattern Comparison: Week 4 vs. Lab 2
 
 | Aspect         | Week 4 (City Info)                    | Lab 2 (Image Analyzer)               |
 | -------------- | ------------------------------------- | ------------------------------------ |
@@ -98,7 +102,12 @@ flowchart TD
 | **Output**     | Return directly                       | Store in Table Storage               |
 | **Execution**  | One at a time: F1 &rarr; F2 &rarr; F3 | Parallel: F1, F2, F3, F4 all at once |
 
-### Why Fan-Out/Fan-In?
+</dev>
+</details>
+
+<details>
+<summary><strong>Why Fan-Out/Fan-In?</strong></summary>
+<dev>
 
 In Week 4, you called `get_city_info` three times **in sequence** - each call waited for the previous one to finish. That was fine for three quick operations, but what if each analysis takes 5 seconds?
 
