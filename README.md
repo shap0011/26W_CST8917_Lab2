@@ -1,1 +1,1 @@
-# Brief instructions on how to run your project locally
+# Brief instructions on how to run the project locally
