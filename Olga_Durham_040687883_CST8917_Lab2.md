@@ -12,18 +12,18 @@
 <details>
 <summary>Read more</summary>
 <dev>
-In Week 4, you built your first Durable Function using the <em>Function Chaining</em> pattern - calling activities one after another in sequence. In this lab, you'll build a **Smart Image Analyzer** that uses the <em>Fan-Out/Fan-In</em> pattern to run multiple analyses on an image <em>in parallel</em>.
+In Week 4, you built your first Durable Function using the <strong>Function Chaining</strong> pattern - calling activities one after another in sequence. In this lab, you'll build a <strong>Smart Image Analyzer</strong> that uses the <strong>Fan-Out/Fan-In</strong> pattern to run multiple analyses on an image <strong>in parallel</strong>.
 
 When an image is uploaded to Azure Blob Storage, your Durable Function will automatically trigger and run four different analyses simultaneously - then combine them into a single report stored in Azure Table Storage.
 
-<em>What You'll Learn:</em>
+<strong>What You'll Learn:</strong>
 - Implement the Fan-Out/Fan-In pattern with Durable Functions
 - Use a Blob Storage trigger to start orchestrations automatically
 - Run multiple activity functions in parallel using `context.task_all()`
 - Store structured results in Azure Table Storage
 - Retrieve results via an HTTP endpoint
 
-<em>Prerequisites:</em>
+<strong>Prerequisites:</strong>
 - Completed Week 4 Durable Functions Exercise
 - VS Code with Azure Functions Extension installed
 - Azure Functions Core Tools installed
