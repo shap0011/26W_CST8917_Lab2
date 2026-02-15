@@ -14,17 +14,22 @@ In Week 4, you built your first Durable Function using the <strong>Function Chai
 When an image is uploaded to Azure Blob Storage, your Durable Function will automatically trigger and run four different analyses simultaneously - then combine them into a single report stored in Azure Table Storage.
 
 <details>
-<summary>Read more</summary>
+<summary><strong>What You'll Learn:</strong></summary>
 <dev>
 
-<strong>What You'll Learn:</strong>
 - Implement the Fan-Out/Fan-In pattern with Durable Functions
 - Use a Blob Storage trigger to start orchestrations automatically
 - Run multiple activity functions in parallel using `context.task_all()`
 - Store structured results in Azure Table Storage
 - Retrieve results via an HTTP endpoint
 
-<strong>Prerequisites:</strong>
+</dev>
+</details>
+
+<details>
+<summary><strong>Prerequisites:</strong></summary>
+<dev>
+
 - Completed Week 4 Durable Functions Exercise
 - VS Code with Azure Functions Extension installed
 - Azure Functions Core Tools installed
