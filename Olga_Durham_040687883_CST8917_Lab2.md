@@ -7,8 +7,21 @@
 
 ---
 
+## Deliverables
+
+| Item                        | Description                                                     |
+| --------------------------- | --------------------------------------------------------------- |
+| [**Function Code**](https://www.example.com)           | `function_app.py` with all functions              |
+| [**Requirements**](https://www.example.com)            | `requirements.txt` with all dependencies                        |
+| [**Local Settings Template**](https://www.example.com) | `local.settings.example.json` (without real connection strings) |
+| [**Demo Video Link**](https://www.example.com)         | YouTube link to the demonstration video                        |
+| [**README**](https://www.example.com)                  | Brief instructions on how to run your project locally           |
 
 ---
+
+<details>
+<summary><strong>Lab 2 Instructions (READ MORE)</strong></summary>
+<dev>
 
 ## Overview
 
@@ -1103,7 +1116,7 @@ After the Function App is created, add the `ImageStorageConnection` setting:
 
 ## Part 8: Submission
 
-<details open>
+<details>
 <summary>Read more</summary>
 <dev>
 
@@ -1113,11 +1126,11 @@ Submit your completed lab by providing a **GitHub repository URL** containing:
 
 | Item                        | Description                                                     |
 | --------------------------- | --------------------------------------------------------------- |
-| [**Function Code**](https://www.example.com)           | Your complete `function_app.py` with all functions              |
-| [**Requirements**](https://www.example.com)            | `requirements.txt` with all dependencies                        |
-| [**Local Settings Template**](https://www.example.com) | `local.settings.example.json` (without real connection strings) |
-| [**Demo Video Link**](https://www.example.com)         | YouTube link to your demonstration video                        |
-| [**README**](https://www.example.com)                  | Brief instructions on how to run your project locally           |
+| **Function Code**          | Your complete `function_app.py` with all functions              |
+| **Requirements**          | `requirements.txt` with all dependencies                        |
+| **Local Settings Template** | `local.settings.example.json` (without real connection strings) |
+| **Demo Video Link**        | YouTube link to your demonstration video                        |
+| **README**                 | Brief instructions on how to run your project locally           |
 
 > **Security Reminder:** Do NOT commit `local.settings.json` with real connection strings. Create a `local.settings.example.json` with placeholder values instead.
 
@@ -1241,6 +1254,9 @@ flowchart LR
 - [Azure Blob Storage Trigger](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-blob-trigger?tabs=python-v2)
 - [Pillow (PIL) Documentation](https://pillow.readthedocs.io/)
 - [Azure Computer Vision API](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview)
+
+</dev>
+</details>
 
 </dev>
 </details>
