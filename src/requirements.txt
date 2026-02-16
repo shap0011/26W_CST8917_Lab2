@@ -6,3 +6,5 @@ azure-functions
 azure-functions-durable
 azure-data-tables
 Pillow
+azure-storage-blob
+
