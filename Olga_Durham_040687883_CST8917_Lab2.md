@@ -11,11 +11,11 @@
 
 | Item                        | Description                                                     |
 | --------------------------- | --------------------------------------------------------------- |
-| [**Function Code**](https://www.example.com)           | `function_app.py` with all functions              |
-| [**Requirements**](https://www.example.com)            | `requirements.txt` with all dependencies                        |
-| [**Local Settings Template**](https://www.example.com) | `local.settings.example.json` (without real connection strings) |
+| [**Function Code**](/src/function_app.py)           | `function_app.py` with all functions              |
+| [**Requirements**](/src/requirements.txt)            | `requirements.txt` with all dependencies                        |
+| [**Local Settings Template**](/local.settings.example.json) | `local.settings.example.json` (without real connection strings) |
 | [**Demo Video Link**](https://www.example.com)         | YouTube link to the demonstration video                        |
-| [**README**](https://www.example.com)                  | Brief instructions on how to run your project locally           |
+| [**README**](/README.md)                  | Brief instructions on how to run your project locally           |
 
 ---
 
