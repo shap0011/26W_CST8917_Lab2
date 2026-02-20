@@ -128,7 +128,7 @@ In VS Code:
 
 1. Upload an image to the `images` container in Azure Portal.
 2. Wait a few seconds for orchestration to complete.
-3. Open: `https://<your-function-app-name>.azurewebsites.net/api/results`
+3. Open: `https://olga-image-analyzer-2026.azurewebsites.net/api/results`
 
 
 You should see stored analysis results from the cloud environment.
