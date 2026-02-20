@@ -14,7 +14,7 @@
 | [**Function Code**](/src/function_app.py)           | `function_app.py` with all functions              |
 | [**Requirements**](/src/requirements.txt)            | `requirements.txt` with all dependencies                        |
 | [**Local Settings Template**](/local.settings.example.json) | `local.settings.example.json` (without real connection strings) |
-| [**Demo Video Link**](https://www.example.com)         | YouTube link to the demonstration video                        |
+| [**Demo Video Link**](https://youtu.be/7QI2q4VtIQ0?si=k69kTLyMBLHaMauS)         | YouTube link to the demonstration video                        |
 | [**README**](/README.md)                  | Brief instructions on how to run your project locally           |
 
 ---
